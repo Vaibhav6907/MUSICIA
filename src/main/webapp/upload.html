@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicia - Upload</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="navbar-brand">Musicia</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#" onclick="auth.logout()">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="upload-form">
+            <h2>Upload Song</h2>
+            <form id="upload-form">
+                <div class="form-group">
+                    <label for="title">Song Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="genre">Genre</label>
+                    <input type="text" id="genre" name="genre" required>
+                </div>
+                <div class="form-group">
+                    <label for="song">Song File</label>
+                    <input type="file" id="song" name="song" accept="audio/*" required class="file-input">
+                </div>
+                <div class="form-group">
+                    <label for="coverArt">Cover Art</label>
+                    <input type="file" id="coverArt" name="coverArt" accept="image/*" required class="file-input">
+                </div>
+                <button type="submit" class="btn">Upload</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/player.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = auth.checkAuth();
+            if (!user || !user.isArtist) {
+                window.location.href = '/';
+            }
+        });
+
+        document.getElementById('upload-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            try {
+                await upload.uploadSong(formData);
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+com\musicia\dao\SongDAO.class
+com\musicia\model\User.class
+com\musicia\servlet\AuthServlet.class
+com\musicia\servlet\SongFileServlet.class
+com\musicia\util\DatabaseUtil.class
+com\musicia\model\Song.class
+com\musicia\dao\UserDAO.class
+com\musicia\servlet\SongServlet.class
