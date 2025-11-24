@@ -93,6 +93,9 @@ src/
 4. Push to the branch
 5. Create a new Pull Request
 
+# Direct Link for war file:-
+https://downgit.github.io/#/home?url=https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/Vaibhav6907/MUSICIA/blob/main/target/musicia-1.0-SNAPSHOT.war
+
 ## License
 
 This project is licensed under the MIT License.
