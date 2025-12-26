@@ -3,7 +3,7 @@
 
 Musicia is a web-based music streaming platform built with Java Servlets and JDBC, allowing artists to upload their songs and users to listen to them.
 
-## Features
+## Features - 
 
 - User authentication (Login/Register)
 - Artist registration
@@ -12,14 +12,14 @@ Musicia is a web-based music streaming platform built with Java Servlets and JDB
 - Cover art support
 - Responsive design
 
-## Prerequisites
+## Prerequisites - 
 
 - Java 11 or higher
 - MySQL 8.0 or higher
 - Maven 3.6 or higher
 - Tomcat 9 or higher
 
-## Setup
+## Setup - 
 
 1. Clone the repository
 2. Create the database:
